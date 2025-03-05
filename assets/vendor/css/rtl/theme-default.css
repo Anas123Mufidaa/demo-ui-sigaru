@@ -277,7 +277,7 @@ button.list-group-item-primary.active {
 .btn-primary {
   color: #fff;
   background: linear-gradient(72.47deg, #000080 22.16%, rgba(15, 95, 240, 0.7) 76.47%);
-  border: none ;
+  border: none;
 }
 .btn-primary:hover {
   color: #fff !important;
