@@ -120,13 +120,13 @@
                   </li> 
       
                   <!-- Penggunaan Ruangan -->
-                  <li class="menu-item active open">
+                  <li class="menu-item">
                       <a href="#" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons ti ti-building"></i>
                         <div data-i18n="Ruangan">Ruangan</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item active">
+                        <li class="menu-item">
                             <a href="penggunaanRuangan.html" class="menu-link">
                               <div>Penggunaan Ruangan</div>
                             </a>
@@ -160,13 +160,13 @@
                   </li> 
       
                   <!-- Barang & Alat -->
-                  <li class="menu-item  ">
+                  <li class="menu-item  active open">
                       <a href="#" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons ti ti-file-settings"></i>
                         <div>Barang & Alat</div>
                       </a>
                       <ul class="menu-sub">
-                        <li class="menu-item ">
+                        <li class="menu-item active">
                             <a href="#" class="menu-link">
                               <div>Lapor Kerusakan</div>
                             </a>
@@ -309,126 +309,134 @@
 
                 <div class="container-xxl flex-grow-1 container-p-y">
 
-                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Ruangan / Penggunaan Ruangan /</span> Form Pengajuan</h4>
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Barang & Alat / Lapor Kerusakan /</span> Form Lapor Kerusakan</h4>
                     <!-- Multi Column with Form Separator -->
                     <div class="card mb-4">
                         <h5 class="card-header">Form Tambah Data</h5>
                         <form class="card-body">
-                            <h6>1. Informasi Utama</h6>
+                            <h6>1. Informasi Laporan</h6>
                             <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="ruangan_id">No / Nama Ruangan</label>
-                                    <select class="form-select" name="ruangan_id">
-                                        <option value="">Pilih Ruangan</option>
-                                        <option value="A101">A101 - Gedung A</option>
-                                        <option value="A102">A102 - Gedung A</option>
-                                        <option value="B201">B201 - Gedung B</option>
-                                        <option value="B202">B202 - Gedung B</option>
-                                        <option value="C301">C301 - Gedung C</option>
-                                        <option value="C302">C302 - Gedung C</option>
-                                        <option value="LabIT1">Lab IT 1</option>
-                                        <option value="LabIT2">Lab IT 2</option>
-                                        <option value="Auditorium">Auditorium Kampus</option>
-                                    
-                                    </select>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="tgl_laporan">Tanggal Pelaporan</label>
+                                    <input type="date" name="tgl_laporan" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
                                 </div>
-                                <div class="col-md-6">
-                                    <label class="form-label" for="nama_kegiatan">Nama Kegiatan</label>
-                                    <input type="text" name="nama_kegiatan" class="form-control" placeholder="Masukkan Nama Kegiatan"/>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="pelapor">Pelapor</label>
+                                    <input type="text" name="pelapor" class="form-control" value="developer" readonly/>
+                                </div>   
+                                <div class="col-md-4">
+                                    <label class="form-label" for="nbm_pelapor">NBM Pelapor</label>
+                                    <input type="text" name="nbm_pelapor" class="form-control" value="11111111111"/>
                                 </div> 
                                 <div class="col-md-6">
-                                    <label class="form-label" for="nama_institusi">Organisasi / Instansi</label>
-                                    <input type="text" name="nama_institusi" class="form-control" value="Administrator" readonly />
+                                    <label class="form-label" for="nama_ruang">Nama Ruangan</label>
+                                    <input type="text" name="nama_ruang" class="form-control" placeholder="Masukkan Nama Ruangan"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label" for="jumlah_peserta">Jumlah Peserta</label>
-                                    <input type="number" name="jumlah_peserta" class="form-control" placeholder="Masukkan Jumlah Peserta" />
-                                </div>
-                            </div>
-                        <hr class="my-4 mx-n4" />
-                            <h6>2. Informasi Pemakai</h6>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label class="form-label" for="penanggungjawab">Nama Koordinator</label>
-                                    <input type="text" name="penanggungjawab" class="form-control" value="developer" readonly/>
-                                </div>    
-                                <div class="col-md-4">
-                                    <label class="form-label" for="nbm">NBM/ No. Identitas</label>
-                                    <input type="text" name="nbm" class="form-control" value="1114078902" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label" for="no_telp">No Telpon</label>
-                                    <input
-                                        type="text"
-                                        name="no_telp"
-                                        class="form-control phone-mask"
-                                        placeholder="Masukkan No Telpon"/>
-                                </div>
-                            </div>
-                        <hr class="my-4 mx-n4" />
-                            <h6>3. Informasi Waktu Kegiatan</h6>
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label class="form-label" for="tanggal_penggunaan">Tanggal Penggunaan</label>
-                                    <input type="date" name="tanggal_penggunaan" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
-                                </div>
-                                <div class="col-md-4">
-                                    <label class="form-label" for="mulai">Waktu Mulai Kegiatan</label>
-                                    <input type="time" name="mulai" class="form-control" placeholder="Masukkan Nama Koordinator" />
-                                </div>    
-                                <div class="col-md-4">
-                                    <label class="form-label" for="selesai">Waktu Selesai Kegiatan</label>
-                                    <input type="time" name="selesai" class="form-control" placeholder="Masukkan NBM/ NO. Identitas" />
-                                </div>
-                            </div>
-                        <hr class="my-4 mx-n4" />
-                            <h6>4. Peralatan Yang Dibutuhkan</h6>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label" for="infokus">Infokus / Unit</label>
-                                    <input type="number" name="infokus" class="form-control" value="0"/>
+                                    <label class="form-label" for="no_ruang">No Ruangan</label>
+                                    <input type="text" name="no_ruang" class="form-control" placeholder="Masukkan No Ruangan"/>
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label" for="papantulis">Papan Tulis / Unit</label>
-                                    <input type="number" name="papantulis" class="form-control" value="0"/>
-                                </div>    
-                                <div class="col-md-4">
-                                    <label class="form-label" for="mic">Mic Wireless Portable / Unit</label>
-                                    <input type="number" name="mic" class="form-control" value="0"/>
-                                </div>    
-                                <div class="col-md-4">
-                                    <label class="form-label" for="audiosound">Audio Sound System / Unit</label>
-                                    <input type="number" name="audiosound" class="form-control" value="0"/>
-                                </div>       
-                                <div class="col-md-4">
-                                    <label class="form-label" for="kabel">Kabel / Unit</label>
-                                    <input type="number" name="kabel" class="form-control" value="0"/>
-                                </div>    
+                                    <label class="form-label" for="lantai">Lantai Gedung</label>
+                                    <input type="number" name="lantai" class="form-control" placeholder="Masukkan Lantai Gedung"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="status">Jenis Fasilitas</label>
+                                    <select class="form-select" name="status">
+                                        <option value="">Pilih Jenis Fasilitas</option>
+                                        <option value="area_terbuka">Area Terbuka</option>
+                                        <option value="gedung">Gedung</option>
+                                        <option value="perabot">Perabot</option>
+                                        <option value="peralatan">Peralatan</option>
+                                        <option value="utilitas">utilitas</option>
+                                    </select>
+                                </div> 
                             </div>
                         <hr class="my-4 mx-n4" />
-                            <h6>5. Informasi Tindak Lanjut</h6>
-                            <div class="row g-3">
+                            <h6>2. Detail Kerusakan</h6>
+                            <div class="row g-3"> 
                                 <div class="col-md-6">
-                                    <label class="form-label" for="tanggal_penggunaan">Tanggal Konfirmasi</label>
-                                    <input type="date" name="tanggal_penggunaan" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                    <label class="form-label" for="ac">AC (Unit/Buah)</label>
+                                    <input type="number" name="ac" class="form-control" value="0" />
+                                </div> 
+                                <div class="col-md-6">
+                                    <label class="form-label" for="kipas_angin">Kipas Angin (Unit/Buah)</label>
+                                    <input type="number" name="kipas_angin" class="form-control" value="0" />
+                                </div>   
+                                <div class="col-md-6">
+                                    <label class="form-label" for="proyektor">Proyektor (Unit/Buah)</label>
+                                    <input type="number" name="proyektor" class="form-control" value="0" />
+                                </div> 
+                                <div class="col-md-6">
+                                    <label class="form-label" for="kabel_vga">Kabel VGA (Unit/Buah)</label>
+                                    <input type="number" name="kabel_vga" class="form-control" value="0" />
+                                </div>    
+                                <div class="col-md-6">
+                                    <label class="form-label" for="kursi">Kursi (Unit/Buah)</label>
+                                    <input type="number" name="kursi" class="form-control" value="0" />
+                                </div>    
+                                <div class="col-md-6">
+                                    <label class="form-label" for="meja">Meja (Unit/Buah)</label>
+                                    <input type="number" name="meja" class="form-control" value="0" />
+                                </div> 
+                                <div class="col-md-6">
+                                    <label class="form-label" for="kunci_pintu">Kunci Pintu (Unit/Buah)</label>
+                                    <input type="number" name="kunci_pintu" class="form-control" value="0" />
+                                </div>    
+                                <div class="col-md-6">
+                                    <label class="form-label" for="lemari">Lemari (Unit/Buah)</label>
+                                    <input type="number" name="lemari" class="form-control" value="0" />
+                                </div>  
+                                <div class="col-md-6">
+                                    <label class="form-label" for="foto_kerusakan">Foto Kerusakan</label>
+                                    <input type="file" name="foto_kerusakan" class="form-control" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="uraian_kerusakan">Uraian Kerusakan</label>
+                                    <textarea name="uraian_kerusakan" class="form-control" placeholder="Isi Uraian Kerusakan"></textarea>
+                                </div>  
+                            </div>
+                        <hr class="my-4 mx-n4" />
+                            <h6>3. Informasi Tindak Lanjut</h6>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label" for="tgl_penerima">Tanggal Laporan Diterima</label>
+                                    <input type="date" name="tgl_penerima" class="form-control dob-picker" placeholder="YYYY-MM-DD" />
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="nama_penerima">Nama Penerima </label>
+                                    <input type="text" name="nama_penerima" class="form-control" placeholder="Masukkan Nama Penerima" />
+                                </div>    
+                                <div class="col-md-4">
+                                    <label class="form-label" for="nbm_penerima">NBM Penerima</label>
+                                    <input type="text" name="nbm_penerima" class="form-control" placeholder="Masukkan NBM Penerima" />
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="status">Status Pengajuan</label>
                                     <select class="form-select" name="status">
                                         <option value="">Pilih Status</option>
-                                        <option value="diajukan">Diajukan</option>
-                                        <option value="disetujui">Disetujui</option>
-                                        <option value="ditolak">Ditolak</option>
+                                        <option value="dilaporkan">Dilaporkan</option>
+                                        <option value="diterima">Diterima</option>
+                                        <option value="telah_diperbaiki">Telah Diperbaiki</option>
                                     </select>
-                                </div>     
-                                <div class="col-md-12">
-                                    <label class="form-label" for="keterangan">Keterangan</label>
-                                    <textarea name="keterangan" class="form-control" placeholder="Isi Jika Ada Keperluan Lain"></textarea>
                                 </div>    
+                                <div class="col-md-6">
+                                    <label class="form-label" for="status">Pilih Petugas Perbaikan</label>
+                                    <select class="form-select" name="status">
+                                        <option value="">Pilih Petugas</option>
+                                        <option value="agung">Agung</option>
+                                        <option value="asep">Asep</option>
+                                        <option value="juelani">Juelani</option>
+                                    </select>
+                                </div>  
+                                <div class="col-md-12">
+                                    <label class="form-label" for="uraian_perbaikan">Uraian Perbaikan</label>
+                                    <textarea name="uraian_perbaikan" class="form-control" placeholder="Isi Uraian Perbaikan"></textarea>
+                                </div>   
                             </div>
                         <div class="pt-4">
                             <button type="submit" class="btn btn-primary me-sm-3 me-1">Simpan</button>
-                            <a href="penggunaanRuangan.html" type="reset" class="btn btn-label-secondary">Batal</a>
+                            <a href="laporKerusakan.html" type="reset" class="btn btn-label-secondary">Batal</a>
                         </div>
                         </form>
                     </div>
