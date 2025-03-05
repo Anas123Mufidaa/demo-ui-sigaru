@@ -386,7 +386,7 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label" for="infokus">Infokus / Unit</label>
-                                    <input type="number" name="infokus" class="form-control dob-picker" value="0"/>
+                                    <input type="number" name="infokus" class="form-control" value="0"/>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label" for="papantulis">Papan Tulis / Unit</label>
@@ -525,24 +525,24 @@
     </script>
     <!-- script untuk mendisabled tombol agar tidak bisa diinspect atau di curi soruce code nya  -->
      <script>
-    //   document.addEventListener("contextmenu", function (e) {
-    //       e.preventDefault();
-    //   });
+      document.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+      });
       
-    //   document.addEventListener("keydown", function (e) {
-    //       if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
-    //           e.preventDefault();
-    //       }
-    //       if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) {
-    //           e.preventDefault();
-    //       }
-    //       if (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C")) {
-    //           e.preventDefault();
-    //       }
-    //       if (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) {
-    //           e.preventDefault();
-    //       }
-    //   });
+      document.addEventListener("keydown", function (e) {
+          if (e.ctrlKey && (e.key === "u" || e.key === "U")) {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C")) {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && (e.key === "j" || e.key === "J")) {
+              e.preventDefault();
+          }
+      });
       </script>
   </body>
 </html>
